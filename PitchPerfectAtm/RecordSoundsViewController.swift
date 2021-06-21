@@ -41,7 +41,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             }
         } catch {
             // failed to record!
+            print("Failed to record")
         }
+    }
+    
+    func toggleViews(mode : Bool){
+        recordButton.isEnabled = !mode
+        stopRecordingButton.isEnabled = mode
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,18 +56,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func recordAudio(_ sender: Any) {
-        print("Recordingn in progress!")
-        // Handle the states of the buttons
-        recordButton.isEnabled=false
-        stopRecordingButton.isEnabled=true
+        print("Recording in progress!")
+        toggleViews(mode: true)
         recordingLabel.text="Recording in progress";
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
-        
-        print(filePath)
         
         do {
             audioRecorder = try AVAudioRecorder(url: filePath!, settings: [:])
@@ -80,8 +82,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func stopRecording(_ sender: Any) {
         recordingLabel.text="Tap to record"
-        recordButton.isEnabled=true
-        stopRecordingButton.isEnabled=false
+        
+        toggleViews(mode: false)
         
         audioRecorder.stop()
         
@@ -109,4 +111,3 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
 }
-
