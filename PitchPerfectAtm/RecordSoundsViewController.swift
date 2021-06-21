@@ -59,30 +59,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let pathArray = [dirPath, recordingName]
         let filePath = URL(string: pathArray.joined(separator: "/"))
         
-        let settings = [
-            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
-            AVNumberOfChannelsKey: 1,
-            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-        ]
-        
-        //        let session = AVAudioSession.sharedInstance()
-        //        try! session.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
-        //
-        //        try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
-        //        audioRecorder.isMeteringEnabled = true
-        //        audioRecorder.prepareToRecord()
-        //        audioRecorder.record()
-        
         do {
-            audioRecorder = try AVAudioRecorder(url: filePath!, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: filePath!, settings: [:])
             audioRecorder.isMeteringEnabled = true
             
             audioRecorder.delegate = self
             audioRecorder.prepareToRecord()
             audioRecorder.record()
             
-            //            recordButton.setTitle("Tap to Stop", for: .normal)
         } catch {
             //finishRecording(success: false)
             print("Recording failed")
