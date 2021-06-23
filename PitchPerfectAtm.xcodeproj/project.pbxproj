@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDB8E6A52683355100D242EC /* PlaySoundsViewController-Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB8E6A42683355100D242EC /* PlaySoundsViewController-Audio.swift */; };
 		CDD136C9267C7545003600D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD136C8267C7545003600D9 /* AppDelegate.swift */; };
 		CDD136CB267C7545003600D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD136CA267C7545003600D9 /* SceneDelegate.swift */; };
 		CDD136CD267C7545003600D9 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD136CC267C7545003600D9 /* RecordSoundsViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CDB8E6A42683355100D242EC /* PlaySoundsViewController-Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController-Audio.swift"; sourceTree = "<group>"; };
 		CDD136C5267C7545003600D9 /* PitchPerfectAtm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfectAtm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD136C8267C7545003600D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDD136CA267C7545003600D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				CDD136D3267C7545003600D9 /* LaunchScreen.storyboard */,
 				CDD136D6267C7545003600D9 /* Info.plist */,
 				CDDC54CC2680905F00E75F59 /* PlaySoundsViewController.swift */,
+				CDB8E6A42683355100D242EC /* PlaySoundsViewController-Audio.swift */,
 			);
 			path = PitchPerfectAtm;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDD136CD267C7545003600D9 /* RecordSoundsViewController.swift in Sources */,
+				CDB8E6A52683355100D242EC /* PlaySoundsViewController-Audio.swift in Sources */,
 				CDD136C9267C7545003600D9 /* AppDelegate.swift in Sources */,
 				CDDC54CD2680905F00E75F59 /* PlaySoundsViewController.swift in Sources */,
 				CDD136CB267C7545003600D9 /* SceneDelegate.swift in Sources */,
